@@ -14,10 +14,12 @@ export default config({
   server: {
     cors: {
       origin: [process.env.FRONTEND_URL],
+      // pass along cookie
       credentials: true,
     },
   },
   db: {
+    // db config
     adapter: 'mongoose',
     url: databaseURL,
     // TODO: add data
